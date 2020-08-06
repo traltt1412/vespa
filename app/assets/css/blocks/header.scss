@@ -1,0 +1,331 @@
+header {
+  background-color: #ffffff;
+
+  a {
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .top-bar {
+    padding: 6px 15px;
+    background-color: #444444;
+
+    .left {
+      a + a {
+        margin-left: 10px;
+      }
+    }
+
+    .right {
+      text-align: right;
+      text-transform: uppercase;
+      color: #cccccc;
+    }
+  }
+
+  .logo-container {
+    padding: 15px 0;
+
+    img {
+      width: 80px;
+
+      @include screen (small) {
+        width: 100px;
+      }
+    }
+  }
+
+  .menu--primary {
+    padding: 10px 0;
+    line-height: 1.1;
+    
+    @include screen (small) {
+      padding: 10px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div {
+      padding: 0 12px;
+      
+      @include screen (small) {
+        padding: 0 20px;
+      }
+
+      + div {
+        @include screen (small) {
+          border-left: 2px solid #ffffff;
+        }
+      }
+
+      a {
+        color: #ffffff;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: block;
+        padding:  10px 0;
+        font-size: 18px;
+
+        @include screen (small) {
+          font-size: 13px;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .menu--secondary {
+    background-color: #ffffff;
+    color: #333333;
+    font-weight: 700;
+    font-size: 16px;
+    
+    @include screen (small) {
+      font-size: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    > div {
+      @include screen (small) {
+        position: relative;
+        margin: 15px;
+      }
+    }
+
+    .secondary__submenu__wrapper {
+      // @include screen (large) {
+      //   display: flex;
+      // }
+    }
+
+    div {
+      &:hover {
+        .secondary__submenu {
+          @include screen (small) {
+            display: block;
+          }
+        }
+      }
+    }
+
+    a {
+      text-transform: uppercase;
+      padding: 10px;
+      font-size: 18px;
+
+      @include screen (small) {
+        font-size: inherit;
+        padding: 0;
+      }
+      
+      &.active {
+        // color: $colorPrimary;
+        position: relative;
+
+        &::after {
+          @include screen (small) {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            height: 2px;
+            background-color: $colorPrimary;
+          }
+        }
+      }
+
+      &.has-sub {
+        @include screen (small, false) {
+          background: url(../images/icons/triangle-down.svg) no-repeat center right 15px / 12px auto;
+  
+          &.expanded {
+            background-image: url(../images/icons/triangle-up.svg);
+  
+            & + .secondary__submenu {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .secondary__submenu {
+    display: none;
+    // background-color: #f2f2f2;
+    
+    @include screen (small) {
+      font-size: 14px;
+      background-color: #ffffff;
+      position: absolute;
+      top: 100%;
+      right: -20px;
+      padding: 15px;
+      z-index: 10;
+      margin-top: 5px;
+      font-size: 18px;
+    }
+    
+    // @include screen (small) {
+    //   padding: 0;
+    //   background-color: transparent;
+    // }
+
+    // @include screen (xl) {
+    //   transform: translateX(50%);
+    //   right: 50%;
+    // }
+
+    .secondary__submenu__wrapper {
+      margin: 0;
+      padding: 0 15px;
+      
+      @include screen (small) {
+        padding: 0;
+        // display: flex;
+        // padding: 5px 0 0;
+        // border: none;
+        // box-shadow: none;
+      }
+    }
+
+    div {
+      line-height: 1.1;
+      
+      @include screen (small) {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      @include screen (large) {
+        
+      }
+
+      + div {
+        @include screen (small) {
+          // border-left: 2px solid #333333;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 7px;
+      background: url(../images/icons/triangle-up.svg) no-repeat center / cover;
+      position: absolute;
+      bottom: 100%;
+      right: 34px;
+      
+      @include screen (large) {
+        right: 40px;
+        transform: translateX(50%);
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 10px;
+      background: transparent;
+      position: absolute;
+      left: 0;
+      bottom: 100%;
+    }
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    // position: absolute;
+    // left: 15px;
+    // top: 50%;
+    // transform: translateY(-50%);
+    width: 24px;
+    height: 20px;
+
+    @include screen (small) {
+      display: none;
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: #000000;
+      position: absolute;
+      transform-origin: center;
+
+      &:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+      &:nth-child(2) {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+      &:nth-child(3) {
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+
+    @include screen (small) {
+      display: block;
+      width: auto;
+    }
+  }
+
+  &.expanded {
+    @include screen (small, false) {
+      position: fixed;
+      width: 100%;;
+      height: 100vh;
+      z-index: 100;
+    }
+
+    nav {
+      @include screen (small, false) {
+        display: block;
+      }
+    }
+
+    .hamburger {
+      span {
+        &:nth-child(1) {
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%) rotate(45deg);
+        }
+        &:nth-child(2) {
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%) rotate(-45deg);
+        }
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+}

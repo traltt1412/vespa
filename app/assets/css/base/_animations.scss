@@ -1,0 +1,11 @@
+.right-hidden {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all .3s ease-in;
+  transition-delay: .5s;
+
+  &.fly-in {
+    transform: none;
+    opacity: 1;
+  }
+}

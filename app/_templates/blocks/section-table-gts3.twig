@@ -1,0 +1,90 @@
+{% set rows = [
+	[
+		"1.000", 
+		"Thay lọc dầu & dầu động cơ, dầu hộp giảm tốc (láp), kiểm tra cổ lái, kiểm tra các hạng mục an toàn, kiểm tra bằng máy PADS", 
+		"70", 
+		"328.330 VND "
+	],
+	[
+		"10.000", 
+		"Thay dây đai truyền động, lọc gió, lọc dầu, dầu động cơ, bạc trượt (3 cái), bi văng (6 viên), kiểm tra các hạng mục an toàn, kiểm tra bằng máy PADS", 
+		"160", 
+		"2.106.519 VND"
+	],
+	[
+		"20.000", 
+		"Thay bugi, dây đai truyền động, lọc gió, lọc dầu, bạc trượt (3 cái), bi văng (6 viên), dầu động cơ, dầu hộp giảm tốc (láp), kiểm tra các hạng mục an toàn, kiểm tra bằng máy PADS", 
+		"160", 
+		"2.970.654 VND"
+	],
+	[
+		"30.000", 
+		"Thay dây đai truyền động, lọc gió, lọc dầu, dầu động cơ, bạc trượt (3 cái), bi văng (6 viên), kiểm tra các hạng mục an toàn, kiểm tra bằng máy PADS", 
+		"160", 
+		"2.106.519 VND"
+	],
+	[
+		"40.000", 
+		"Thay bugi, dây đai truyền động, lọc gió, lọc dầu, bạc trượt (3 cái), bi văng (6 viên), dầu động cơ, dầu hộp giảm tốc (láp), kiểm tra các hạng mục an toàn, kiểm tra bằng máy PADS", 
+		"160", 
+		"2.970.654 VND"
+	],
+	[
+		"50.000", 
+		"Thay dây đai truyền động, lọc gió, lọc dầu, dầu động cơ, bạc trượt (3 cái), bi văng (6 viên), kiểm tra các hạng mục an toàn, kiểm tra bằng máy PADS", 
+		"160", 
+		"2.106.519 VND"
+	],
+	[
+		"60.000", 
+		"Thay bugi, dây đai truyền động, lọc gió, lọc dầu, bạc trượt (3 cái), bi văng (6 viên), dầu động cơ, dầu hộp giảm tốc (láp), kiểm tra các hạng mục an toàn, kiểm tra bằng máy PADS", 
+		"200", 
+		"2.970.654 VND"
+	]
+] %}
+<div class="section-table">
+  <div class="container">
+    <div class="logo">
+      <img src="./assets/images/logo.svg" alt="">
+    </div>
+    <div class="flex-row relative items-center">
+      <div class="content-left">
+        <h2>Chế độ bảo dưỡng định kỳ dành cho
+					xe Vespa GTS 300 Super Tech I-GET</h2>
+        <div class="img-wrapper">
+          <img src="./assets/images/table-primavera.png" alt="">
+        </div>
+        <p>Tham khảo Sổ tay hướng dẫn sử dụng xe và bảo dưỡng để biết thêm thông tin chi tiết về lịch bảo dưỡng và lưu ý thực hiện các gói bảo dưỡng tại hệ thống Đại lý chính hãng: bạn có thể hoàn toàn yên tâm và không lo lắng, cũng như tra cứu lịch sử bảo dưỡng, sửa chữa.</p>
+      </div>
+      <div class="content-right">
+				<div class="content-wrapper">
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<td>Số km</td>
+									<td>Nội dung thực hiện</td>
+									<td>Thời gian<br>(Phút)<br>(**)</td>
+									<td>Giá đề xuất cho phụ tùng & dầu nhớt</td>
+								</tr>
+							</thead>
+							<tbody>
+								{% for row in rows %}
+									<tr>
+										<td>{{ row[0] }}</td>
+										<td>{{ row[1] }}</td>
+										<td>{{ row[2] }}</td>
+										<td>{{ row[3] }}</td>
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</div>
+					<div class="note">
+						<p>(**) Chi phí nhân công tham khảo từ 100.000 ~ 130.000 VND / giờ công.</p>
+					</div>
+				</div>
+      </div>
+    </div>
+	</div>
+</div>

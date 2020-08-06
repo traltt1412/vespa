@@ -1,0 +1,188 @@
+.section-table {
+  @include screen (small, false) {
+    padding-top: 30px;
+  }
+
+  .logo {
+    width: 80px;
+    margin-bottom: 30px;
+
+    @include screen (small) {
+      width: 100px;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+  }
+  .content-left {
+    width: 100%;
+    padding: 0 15px;
+    position: relative;
+    
+    @include screen (small) {
+      width: 50%;
+    }
+
+    h2 {
+      font-family: $font-sfu-futura;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 20px;
+      margin-bottom: 30px;
+      
+      @include screen (small) {
+        font-size: 24px;
+        max-width: 550px;
+      }
+    }
+
+    p {
+      font-family: $font-MP;
+      font-size: 14px;
+      font-weight: 600;
+      font-style: italic;
+      max-width: 470px;
+      margin-top: 50px;
+    }
+
+    .img-wrapper {
+      img {
+        @include screen (small) {
+          width: calc(100% + 45px);
+          max-width: 9999px;
+        }
+      }
+    }
+
+  }
+  .content-right {
+    width: 100%;
+    padding: 15px;
+    
+    @include screen (small) {
+      background-color: #E6E7E8;
+      width: 50%;
+      padding: 0;
+    }
+    
+    .content-wrapper {
+      @include screen (small) {
+        padding: 80px 30px 80px 60px;
+      }
+    }
+  }
+
+  .table-wrapper {
+    table {
+      min-width: 100%;
+      border: none;
+      outline: none;
+      table-layout: fixed;
+      
+      @include screen (medium) {
+        width: 100%;
+      }
+    }
+
+    td {
+      vertical-align: top;
+      border: none;
+      outline: none;
+      padding: 10px 5px;
+      font-size: 12px;
+      font-weight: 600;
+
+      @include screen (small) {
+        padding: 15px 10px;
+        font-size: inherit;
+      }
+
+      &:nth-child(1) {
+        @include screen (small) {
+          width: 90px;
+        }
+      }
+      &:nth-child(3) {
+        @include screen (small) {
+          width: 90px;
+        }
+      }
+      &:nth-child(4) {
+        @include screen (small) {
+          width: 120px;
+        }
+      }
+    }
+    
+    thead {
+      tr {
+        background-color: #F2E629;
+      }
+
+      td {
+        text-align: center;
+        font-family: $font-sfu-helvetica;
+        font-size: 12px;
+        font-weight: 700;
+        vertical-align: middle;
+        
+        @include screen (small) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: #EBEBEC;
+        }
+
+        &:last-child {
+          border-bottom: 2px solid #939598;
+        }
+      }
+
+      td {
+        vertical-align: middle;
+        text-align: center;
+        font-size: 12px;
+
+        // @include screen (small) {
+        //   font-size: 14px;
+        // }
+
+        &:nth-child(1) {
+          font-family: $font-montserrat;
+          font-weight: 700;
+          border-right: 1px solid #939598;
+          font-size: 12px;
+          
+          @include screen (small) {
+            font-size: 16px;
+          }
+        }
+        &:nth-child(2) {
+          text-align: left;
+          padding: 10px 5px;
+          
+          @include screen (large) {
+            padding: 10px 20px;
+            // min-width: 300px;
+          }
+        }
+      }
+    }
+
+  }
+  .note {
+    margin-top: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: italic;
+
+    p {
+      margin-bottom: 0px;
+    }
+  }
+}

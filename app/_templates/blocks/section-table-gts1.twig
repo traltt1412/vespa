@@ -1,0 +1,126 @@
+{% set rows = [
+	[
+		"1.000", 
+		"Thay lọc dầu & dầu động cơ, dầu hộp giảm tốc (láp), kiểm tra cổ lái, kiểm tra các hạng mục an toàn, kiểm tra bằng máy PADS", 
+		"70", 
+		"328.330 VND "
+	],
+	[
+		"5.000", 
+		"Kiểm tra bằng máy PADS, kiểm tra độ mòn má phanh, kiểm tra mức dầu động cơ", 
+		"20", 
+		""
+	],
+	[
+		"10.000", 
+		"Thay bugi, lọc gió, lọc dầu, dầu động cơ, bạc trượt (3 cái), bi văng (6 viên), kiểm tra các hạng mục an toàn, kiểm tra bằng máy PADS", 
+		"110", 
+		"891.597 VND "
+	],
+	[
+		"15.000", 
+		"Thay dây đai truyền động, kiểm tra độ mòn má phanh, kiểm tra mức dầu động cơ, Kiểm tra bằng máy PADS", 
+		"55", 
+		"1.548.140 VND "
+	],
+	[
+		"20.000", 
+		"Thay bugi, lọc gió, lọc dầu, dầu động cơ, dầu hộp giảm tốc (láp), bạc trượt (3 cái), bi văng (6 viên), kiểm tra các hạng mục an toàn, kiểm tra bằng máy PADS", 
+		"160", 
+		"921.597 VND"
+	],
+	[
+		"25.000", 
+		"Kiểm tra bằng máy PADS, kiểm tra độ mòn má phanh, kiểm tra mức dầu động cơ", 
+		"20", 
+		""
+	],
+	[
+		"30.000", 
+		"Thay bugi, dây đai truyền động, lọc gió, lọc dầu, dầu động cơ, bạc trượt (3 cái), bi văng (6 viên), kiểm tra các hạng mục an toàn, kiểm tra bằng máy PADS", 
+		"150", 
+		"2.439.737 VND"
+	],
+	[
+		"35.000", 
+		"Kiểm tra bằng máy PADS, kiểm tra độ mòn má phanh, kiểm tra mức dầu động cơ", 
+		"20", 
+		""
+	],
+	[
+		"40.000", 
+		"Thay bugi, lọc gió, lọc dầu, dầu động cơ, dầu hộp giảm tốc (láp), bạc trượt (3 cái), bi văng (6 viên), kiểm tra các hạng mục an toàn, kiểm tra bằng máy PADS", 
+		"160", 
+		"921.597 VND"
+	],
+	[
+		"45.000", 
+		"Thay dây đai truyền động, kiểm tra độ mòn má phanh, kiểm tra mức dầu động cơ, Kiểm tra bằng máy PADS", 
+		"55", 
+		"1.548.140 VND "
+	],
+	[
+		"50.000", 
+		"Thay bugi, lọc gió, lọc dầu, dầu động cơ, bạc trượt (3 cái), bi văng (6 viên), kiểm tra các hạng mục an toàn, kiểm tra bằng máy PADS", 
+		"110", 
+		"891.597 VND"
+	],
+	[
+		"55.000", 
+		"Kiểm tra bằng máy PADS, kiểm tra độ mòn má phanh, kiểm tra mức dầu động cơ", 
+		"20", 
+		""
+	],
+	[
+		"60.000", 
+		"Thay bugi, dây đai truyền động, lọc gió, lọc dầu, dầu động cơ, dầu hộp giảm tốc (láp), bạc trượt (3 cái), bi văng (6 viên), kiểm tra các hạng mục an toàn, kiểm tra bằng máy PADS", 
+		"200", 
+		"2.469.737 VND"
+	]
+] %}
+<div class="section-table">
+  <div class="container">
+    <div class="logo">
+      <img src="./assets/images/logo.svg" alt="">
+    </div>
+    <div class="flex-row relative items-center">
+      <div class="content-left">
+        <h2>Chế độ bảo dưỡng định kỳ dành cho
+					xe Vespa GTS 125/150 I-GET</h2>
+        <div class="img-wrapper">
+          <img src="./assets/images/table-primavera.png" alt="">
+        </div>
+        <p>Tham khảo Sổ tay hướng dẫn sử dụng xe và bảo dưỡng để biết thêm thông tin chi tiết về lịch bảo dưỡng và lưu ý thực hiện các gói bảo dưỡng tại hệ thống Đại lý chính hãng: bạn có thể hoàn toàn yên tâm và không lo lắng, cũng như tra cứu lịch sử bảo dưỡng, sửa chữa.</p>
+      </div>
+      <div class="content-right">
+				<div class="content-wrapper">
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<td>Số km</td>
+									<td>Nội dung thực hiện</td>
+									<td>Thời gian<br>(Phút)<br>(**)</td>
+									<td>Giá đề xuất cho phụ tùng & dầu nhớt</td>
+								</tr>
+							</thead>
+							<tbody>
+								{% for row in rows %}
+									<tr>
+										<td>{{ row[0] }}</td>
+										<td>{{ row[1] }}</td>
+										<td>{{ row[2] }}</td>
+										<td>{{ row[3] }}</td>
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</div>
+					<div class="note">
+						<p>(**) Chi phí nhân công tham khảo từ 100.000 ~ 130.000 VND / giờ công.</p>
+					</div>
+				</div>
+      </div>
+    </div>
+	</div>
+</div>

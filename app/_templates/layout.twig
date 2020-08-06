@@ -1,0 +1,41 @@
+{% set data = htmlWebpackPlugin.options %}
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>{{ data.title }}</title>
+  <link rel="shortcut icon" type="image/png" href="assets/images/favicon.ico"/>
+ 
+</head>
+
+<body>
+
+<!-- HEADER -->
+{% include './header.twig' %}
+<!-------------------->
+
+<!-- MAIN CONTENT -->
+{% block page %}{% endblock %}
+<!-------------------->
+<a href="javascript:void(0)" class="btn--to-top" data-module="ScrollTop">
+  <img src="./assets/images/icons/arrow_up.svg" alt="">
+</a>
+<div class="contact">
+  <div class="contact-icon-wrapper">
+    <img src="./assets/images/icons/icon-phone.svg" alt="">
+  </div>
+  <div class="contact-text-wrapper">
+    <div class="small">Hotline hỗ trợ</div>
+    <div class="big">1800-5555-85</div>
+  </div>
+</div>
+<!-- FOOTER -->
+{% include './footer.twig' %}
+<!-------------------->
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</body>
+</html>

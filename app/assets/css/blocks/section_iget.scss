@@ -1,0 +1,83 @@
+.section--iget {
+  .top-notes {
+    font-size: 14px;
+
+    @include screen (small) {
+      font-size: 18px;
+    }
+  }
+
+  .banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .iget-machine {
+      flex: 0 0 auto;
+      width: 100%;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include screen (small) {
+        width: 50%;
+      }
+
+      img {
+        width: 100%;
+        max-width: 700px;
+      }
+    }
+
+    .logo-iget {
+      width: 100%;
+      max-width: 250px;
+      margin-bottom: 30px;
+    }
+
+    .text-wrapper {
+      flex: 0 0 auto;
+      width: 100%;
+      padding: 30px 15px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      @include screen (small) {
+        width: 50%;
+        font-size: 24px;
+      }
+      
+      h3 {
+        color: $colorPrimary;
+        margin-bottom: 5px;
+        
+        @include screen (small) {
+          display: block;
+          font-size: 24px;
+          margin-bottom: 15px;
+        }
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@keyframes iget {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  20%, 22%, 24%, 26%, 28%, 30%, 32%, 34%, 36%, 38%, 40%, 42%, 44%, 46%, 48%, 50%, 52%, 54%, 56%, 58%, 60%, 62%, 64%, 66%, 68%, 70%, 72%, 74%, 76%, 78%, 80%  {
+    transform: rotate(0.5deg);
+  }
+  19%, 21%, 23%, 25%, 27%, 29%, 31%, 33%, 35%, 37%, 39%, 41%, 43%, 45%, 47%, 49%, 51%, 53%, 55%, 57%, 59%, 61%, 63%, 65%, 67%, 69%, 71%, 73%, 75%, 77%, 79%, 81% {
+    transform: rotate(0);
+  }
+}

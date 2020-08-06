@@ -1,0 +1,9 @@
+{
+	"src": "app",
+	"tmp": ".tmp",
+	"dist": "dist",
+	"css": "assets/css",
+	"js": "assets/js",
+	"img": "assets/images",
+	"fonts": "assets/fonts"
+}

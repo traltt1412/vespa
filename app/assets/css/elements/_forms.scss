@@ -1,0 +1,40 @@
+input[type=text] {
+  height: 50px;
+  border: 2px solid #cccccc;
+  background: #ffffff;
+  padding: 0 15px;
+  border-radius: 0;
+  min-width: 0;
+  
+  @include placeholder {
+    color: #000000;
+    font-weight: 500px;
+    font-style: italic;
+  }
+  
+  &:focus {
+    border: 2px solid $colorPrimary;
+    // border: none;
+    outline: none;
+  }
+}
+
+textarea {
+  display: block;
+  border: 2px solid #cccccc;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 0;
+  resize: none;
+
+  &:focus {
+    border: 2px solid $colorPrimary;
+    outline: none;
+  }
+
+  @include placeholder {
+    color: #000000;
+    font-weight: 500px;
+    font-style: italic;
+  }
+}

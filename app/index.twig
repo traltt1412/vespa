@@ -1,0 +1,88 @@
+{% extends "./_templates/layout.twig" %}
+
+{# If rename this file, rename in gulp 'html' task as well #}
+{% block page %}
+<main>
+	<div>
+		<div class="content-dynamic" data-content="primavera">
+			{% include "./_templates/blocks/section-banner-primavera.twig" %}
+		</div>
+		<div class="content-dynamic" data-content="sprint" hidden>
+			{% include "./_templates/blocks/section-banner-sprint.twig" %}
+		</div>
+		<div class="content-dynamic" data-content="gts1" hidden>
+			{% include "./_templates/blocks/section-banner-gts1.twig" %}
+		</div>
+		<div class="content-dynamic" data-content="gts2" hidden>
+			{% include "./_templates/blocks/section-banner-gts2.twig" %}
+		</div>
+		<div class="content-dynamic" data-content="gts3" hidden>
+			{% include "./_templates/blocks/section-banner-gts3.twig" %}
+		</div>
+	</div>
+	<div class="js--anchor-target" data-anchor="benefit">
+		<div class="content-dynamic" data-content="primavera">
+			{% include "./_templates/blocks/section-benefit-primavera.twig" %}
+		</div>
+		<div class="content-dynamic" data-content="sprint" hidden>
+			{% include "./_templates/blocks/section-benefit-sprint.twig" %}
+		</div>
+		<div class="content-dynamic" data-content="gts1" hidden>
+			{% include "./_templates/blocks/section-benefit-gts1.twig" %}
+		</div>
+		<div class="content-dynamic" data-content="gts2" hidden>
+			{% include "./_templates/blocks/section-benefit-gts2.twig" %}
+		</div>
+		<div class="content-dynamic" data-content="gts3" hidden>
+			{% include "./_templates/blocks/section-benefit-gts3.twig" %}
+		</div>
+	</div>
+	<div class="js--anchor-target" data-anchor="table">
+		<div class="content-dynamic" data-content="primavera">
+			{% include "./_templates/blocks/section-table-primavera.twig" %}
+		</div>
+		<div class="content-dynamic" data-content="sprint" hidden>
+			{% include "./_templates/blocks/section-table-sprint.twig" %}
+		</div>
+		<div class="content-dynamic" data-content="gts1" hidden>
+			{% include "./_templates/blocks/section-table-gts1.twig" %}
+		</div>
+		<div class="content-dynamic" data-content="gts2" hidden>
+			{% include "./_templates/blocks/section-table-gts2.twig" %}
+		</div>
+		<div class="content-dynamic" data-content="gts3" hidden>
+			{% include "./_templates/blocks/section-table-gts3.twig" %}
+		</div>
+	</div>
+	<div class="js--anchor-target" data-anchor="location">
+		{% include "./_templates/blocks/section-location.twig" %}
+	</div>
+	<div class="section section--comment" data-module="Comments" data-end-point="./_data/comments.json">
+		<div class="container">
+			<div class="logo">
+				<img src="./assets/images/logo.svg" alt="">
+			</div>
+			<div class="container--sm">
+				<p><strong>Ý Kiến (<span class="total"></span>)</strong></p>
+				<form>
+					<div class="relative">
+						<input type="text" placeholder="Tên khách hàng">
+						<div class="flex mt-10">
+							<textarea class="flex-1" rows="1" placeholder="Ý kiến của bạn"></textarea>
+							<button type="button" class="btn btn-send flex-0 ml-10">Gửi</button>
+						</div>
+					</div>
+					<div class="flex comment-categories">
+						<div class="cat-item active">Tất cả bình luận</div>
+					</div>
+					<div class="comment-list text-left">
+					</div>
+					<div class="flex justify-center mt-30">
+						<a href="javascript:void(0)" class="js--load-more link--load-more">Xem thêm</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</main>
+{% endblock %}

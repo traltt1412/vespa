@@ -1,0 +1,76 @@
+.contact {
+  background-color: #faf2f2;
+  border-radius: 99999px;
+  display: flex;
+  align-items: center;
+  width: 150px;
+  position: fixed;
+  // bottom: 2.1vw;
+  bottom: 100px;
+  right: 15px;
+  box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.3);
+  z-index: 10;
+  
+  // @include screen (small) {
+    //   width: 12.46vw;
+    // }
+    
+    @include screen (small) {
+    bottom: 50px;
+    width: 180px;
+  }
+
+  .contact-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.3);
+    
+    // @include screen (small) {
+    //   width: 3.47vw;
+    //   height: 3.47vw;
+    // }
+
+    @include screen (small) {
+      width: 50px;
+      height: 50px;
+    }
+
+    img {
+      width: 45%;
+    }
+  }
+
+  .contact-text-wrapper {
+    margin-left: 15px;
+    
+    @include screen (small) {
+      margin-left: 15px;
+    }
+    
+    .small {
+      font-family: $font-sfu-futura;
+      font-weight: 800;
+      font-style: italic;
+      font-size: 8px;
+      
+      @include screen (small) {
+        font-size: 9px;
+      }
+    }
+    
+    .big {
+      font-family: $font-BB;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1;
+      
+      @include screen (small) {
+        font-size: 20px;
+      }
+    }
+  }
+}
