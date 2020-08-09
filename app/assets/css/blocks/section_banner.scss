@@ -54,9 +54,14 @@
 
     p {
       font-family: $font-MP;
-      font-size: 1.4vw;
+      font-size: 8px;
       font-style: italic;
       max-width: 43.1vw;
+      margin-bottom: 0;
+      
+      @include screen (small) {
+        font-size: 1.4vw;
+      }
     }
   }
 

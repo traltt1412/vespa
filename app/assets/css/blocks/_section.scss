@@ -5,17 +5,14 @@
   align-items: center;
   width: 150px;
   position: fixed;
-  // bottom: 2.1vw;
   bottom: 100px;
   right: 15px;
   box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.3);
   z-index: 10;
+  text-decoration: none;
   
-  // @include screen (small) {
-    //   width: 12.46vw;
-    // }
     
-    @include screen (small) {
+  @include screen (small) {
     bottom: 50px;
     width: 180px;
   }
