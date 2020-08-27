@@ -67,6 +67,7 @@
 
   .tiles {
     display: flex;
+    justify-content: flex-end;
     padding: 0 15px;
     position: absolute;
     width: 100%;

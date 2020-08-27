@@ -97,12 +97,6 @@ header {
       }
     }
 
-    .secondary__submenu__wrapper {
-      // @include screen (large) {
-      //   display: flex;
-      // }
-    }
-
     div {
       &:hover {
         .secondary__submenu {
@@ -126,6 +120,8 @@ header {
       &.active {
         // color: $colorPrimary;
         position: relative;
+        display: inline-block;
+        width: auto;
 
         &::after {
           @include screen (small) {
@@ -225,7 +221,7 @@ header {
       height: 7px;
       background: url(../images/icons/triangle-up.svg) no-repeat center / cover;
       position: absolute;
-      bottom: 100%;
+      bottom: 95%;
       right: 34px;
       
       @include screen (large) {
