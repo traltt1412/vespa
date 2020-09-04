@@ -1,5 +1,13 @@
 header {
   background-color: #ffffff;
+  
+  .header-container {
+    // justify-content: space-between;
+
+    // @include screen (small) {
+    //   justify-content: flex-end;
+    // }
+  }
 
   a {
     cursor: pointer;
@@ -27,6 +35,13 @@ header {
 
   .logo-container {
     padding: 15px 0;
+    
+    @include screen (small) {
+      position: fixed;
+      z-index: 5;
+      // left: 15px;
+      top: 0;
+    }
 
     img {
       width: 80px;
@@ -251,6 +266,9 @@ header {
     // transform: translateY(-50%);
     width: 24px;
     height: 20px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    margin-left: auto;
 
     @include screen (small) {
       display: none;
@@ -285,6 +303,7 @@ header {
   nav {
     display: none;
     width: 100%;
+    margin-left: auto;
 
     @include screen (small) {
       display: block;
