@@ -100,7 +100,7 @@
   right: 0;
   top: 50%;
   padding: 8px 15px 5px;
-  background: $colorPrimary;
+  background: #6ECEB2;
   text-decoration: none;
   border-radius: 5px 5px 0 0;
   z-index: 10;
@@ -111,7 +111,7 @@
   text-transform: uppercase;
   transform-origin: bottom right; 
   transform: rotate(-90deg);
-  box-shadow: 0 0 2px rgba($color: #000000, $alpha: 0.4);
+  box-shadow: 0 0 2px rgba(0,0,0,0.4);
 
   &.bao-duong {
     top: calc(50% - 230px);
