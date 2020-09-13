@@ -19,13 +19,13 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 160px;
+  bottom: 110px;
   right: 15px;
   z-index: 10;
   transition: all .3s;
-
+  
   @include screen (small) {
-    bottom: 110px;
+    bottom: 130px;
   }
 
   &.hide {

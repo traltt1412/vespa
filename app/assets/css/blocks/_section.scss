@@ -5,16 +5,23 @@
   align-items: center;
   width: 150px;
   position: fixed;
-  bottom: 100px;
+  bottom: 60px;
   right: 15px;
   box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.3);
   z-index: 10;
   text-decoration: none;
   
-    
   @include screen (small) {
-    bottom: 50px;
+    bottom: 70px;
     width: 180px;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+
+  &.sp {
+    bottom: 10px;
   }
 
   .contact-icon-wrapper {
@@ -69,5 +76,20 @@
         font-size: 20px;
       }
     }
+    .sp {
+      font-family: $font-sfu-futura;
+      font-weight: 800;
+      font-style: italic;
+      font-size: 11px;
+      text-transform: uppercase;
+      padding: 12px 0;
+      text-align: center;
+      
+      @include screen (small) {
+        padding: 15px 0;
+        font-size: 14px;
+      }
+    }
   }
+
 }
